@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{cae018d8-5332-40e9-981a-73925a189367}</ProjectGuid>
+    <RootNamespace>External</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>external</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IntDir>$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\Program Files\Microsoft Visual Studio\2022\Community\VC\vcpkg\installed\x64-windows\include\;C:\Users\herso\Documents\pio stop naming it porn executor\External\Roblox\Luau\include\;C:\Users\herso\Documents\pio stop naming it porn executor\External\Roblox\Luau\src\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Program Files\Microsoft Visual Studio\2022\Community\VC\vcpkg\installed\x64-windows\lib\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>C:\Program Files\Microsoft Visual Studio\2022\Community\VC\vcpkg\installed\x64-windows\lib\xxhash.lib;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\vcpkg\installed\x64-windows\lib\zstd.lib;"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\vcpkg\installed\x64-windows\lib\Luau.Analysis.lib";"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\vcpkg\installed\x64-windows\lib\Luau.Ast.lib";"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\vcpkg\installed\x64-windows\lib\Luau.CLI.lib.lib";"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\vcpkg\installed\x64-windows\lib\Luau.Compiler.lib";"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\vcpkg\installed\x64-windows\lib\Luau.Config.lib";"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\vcpkg\installed\x64-windows\lib\Luau.EqSat.lib";"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\vcpkg\installed\x64-windows\lib\Luau.VM.lib";%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)Utils\</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4244;4267;4018;4200;4804;4305;4309</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="dumpa.cpp" />
+    <ClCompile Include="Roblox\rbx\instance\attribute.cpp" />
+    <ClCompile Include="Roblox\rbx\instance\instance.cpp" />
+    <ClCompile Include="Roblox\rbx\reflection\class.cpp" />
+    <ClCompile Include="Roblox\rbx\reflection\function.cpp" />
+    <ClCompile Include="Roblox\rbx\reflection\member.cpp" />
+    <ClCompile Include="Roblox\rbx\reflection\property.cpp" />
+    <ClCompile Include="Roblox\rbx\script\script_context.cpp" />
+    <ClCompile Include="Roblox\rbx\utilities\utilities.cpp" />
+    <ClCompile Include="Roblox\TaskScheduler\task.cpp" />
+    <ClCompile Include="Utils\ntdll.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="External_utils.h" />
+    <ClInclude Include="Roblox\Instance.h" />
+    <ClInclude Include="Roblox\rbx\instance\attribute.h" />
+    <ClInclude Include="Roblox\rbx\instance\instance.h" />
+    <ClInclude Include="Roblox\rbx\luastate\luastate.h" />
+    <ClInclude Include="Roblox\rbx\offsets.h" />
+    <ClInclude Include="Roblox\rbx\rbx.h" />
+    <ClInclude Include="Roblox\rbx\reflection\class.h" />
+    <ClInclude Include="Roblox\rbx\reflection\function.h" />
+    <ClInclude Include="Roblox\rbx\reflection\member.h" />
+    <ClInclude Include="Roblox\rbx\reflection\property.h" />
+    <ClInclude Include="Roblox\rbx\script\script_context.h" />
+    <ClInclude Include="Roblox\rbx\script\threadref.h" />
+    <ClInclude Include="Roblox\rbx\utilities\utilities.h" />
+    <ClInclude Include="Roblox\TaskScheduler\task.h" />
+    <ClInclude Include="Roblox\TaskScheduler\typedef.h" />
+    <ClInclude Include="Utils\Dumper.h" />
+    <ClInclude Include="Utils\Memory.h" />
+    <ClInclude Include="Utils\ntdll.h" />
+    <ClInclude Include="Utils\TP\ThreadPool.hpp" />
+    <ClInclude Include="Utils\TP\TP.h" />
+    <ClInclude Include="Utils\TP\Utils.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
