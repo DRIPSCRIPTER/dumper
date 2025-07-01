@@ -1,5 +1,6 @@
 # dumper
 **roblox bling bling dumper by nbeater678**
 
--- wow pro credits??
-credits:NO ONE
+credits:
+1. piogayly [knowledge giver]
+2. themoon.dev [thanzk for the fix of get_children]
