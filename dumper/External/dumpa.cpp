@@ -6,6 +6,13 @@
 int main()
 {
     setup_shits();
+
+    std::cout << "-                      -" << std::endl;
+    std::cout << "-                      -" << std::endl;
+    std::cout << "START OF THE REAL DUMPER" << std::endl;
+    std::cout << "-                      -" << std::endl;
+    std::cout << "-                      -" << std::endl;
+
     print_address("capabilities", dump->dump_capabilities());
     print_address("getgc", dump->dump_getgc());
     print_address("instance_name", dump->dump_instance_name());
@@ -14,5 +21,6 @@ int main()
     print_address("globalstate_corescripts", dump->dump_globalstate_corescripts());
     print_address("globalstate_gamescripts", dump->dump_globalstate_gamescripts());
     print_address("vmstate", dump->dump_vmstate());
+    print_address("instance_capabilities", dump->get_instance_capabilities());
     return 0;
 }

@@ -112,6 +112,20 @@ public:
 		return 0;
 	}
 
+	auto get_instance_capabilities() -> uintptr_t {
+		for (uintptr_t offset = 0x378; offset < 0x7FF; offset++) {
+			int must_val = 33554433;
+			auto cptr1 = process->read_longlong(cg + 0x18);
+			int intval = process->read_int(cptr1 + offset);
+			if (intval == must_val) {
+				return offset;
+			}
+			else {
+				continue;
+			}
+		}
+	}
+
 	auto set_modulescript(uintptr_t addy) {
 		ms = addy;
 	}
@@ -124,10 +138,16 @@ public:
 		dm = dam;
 	}
 
+	auto set_coregui(uintptr_t cg12) -> void {
+		cg = cg12;
+	}
+
 private:
 	uintptr_t s;
 	uintptr_t dm;
 	uintptr_t ms;
+	uintptr_t cg;
+
 	bool match_with_wildcards(const uint8_t* data, const std::vector<uint8_t>& pattern) {
 		for (size_t i = 0; i < pattern.size(); ++i) {
 			if (pattern[i] != 0x00 && data[i] != pattern[i])

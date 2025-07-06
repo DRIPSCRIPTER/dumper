@@ -51,12 +51,15 @@ static void setup_shits() {
     dump->set_datamodel(TaskScheduler->GetDataModelClient());
     dump->set_scriptcontext(TaskScheduler->GetScriptContextClient());
     rbx::offsets::init();
+    Instance DataModel(TaskScheduler->GetDataModelClient());
     print_address("DataModel", TaskScheduler->GetDataModelClient());
     print_address("ScriptContext", TaskScheduler->GetScriptContextClient());
+    print_address("CoreGui", DataModel.find_first_child("CoreGui").address);
     print_address("Modulescript", homepage_raper(TaskScheduler->GetDataModelClient()));
     static uintptr_t Capabilities = 0xFFFFFFF00LL | 0x200000000000003FLL;
     if (scriptcontext.set_max_capabilities(Capabilities)) {
         std::cout << "[*] Capabilities Setted" << std::endl;
     }
     dump->set_modulescript(homepage_raper(TaskScheduler->GetDataModelClient()));
+    dump->set_coregui(DataModel.find_first_child("CoreGui").address);
 }
